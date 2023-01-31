@@ -1,49 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
- <!javascript on entry>
-  <script>
-    // new JSON object
-   let user = new Object();
-   user.firstname='';
-   user.lastname='';
 
-  </script>
-  <!html information>
-   <meta charset="UTF-8">
-   <link rel="stylesheet" href="./styles.scss">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>N-Dimensional forms</title>
+<head>
+  <!javascript on entry>
+    <script>
+      // new JSON object
+      let user = new Object();
+      user.firstname = '';
+      user.lastname = '';
+      let now = new Date();
+      let time = now.toDateString();
+    </script>
+    <!html information>
+      <meta charset="UTF-8">
+      <link rel="stylesheet" href="./styles.scss">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>N-Dimensional forms</title>
 </head>
 
 <body>
- <header>
-  <hr>
-  <b class="center">
-   <h1>POLYTYPICAL N-DIMENSIONAL FORMS</h1>
-  </b>
- </header>
- <hr>
- <section>
-  <a title="Claudio Rocchini, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons" class="center">
-   <img width="500" alt="Gosset 1 22 polytope" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gosset_1_22_polytope.svg/512px-Gosset_1_22_polytope.svg.png"></a>
-  <footer>
-   <hr>
-   <nav class="footer">
-    <a href="https://en.wikipedia.org/wiki/Regular_polytope">
-     <h2>learn more about regular polytopes in <i> n-dimensional space</i></h2>
-    </a>
-   </nav>
-   <hr>
-   <section>
-    <h1> <b>LEARN MORE HERE</b></h1>
-    <button class="center" onmouseover="highlight();" onclick="alert('hello')">
-     cool graphs
-    </button>
+  <script>
+    document.write("<h3 >" + time + "</h3>");
+
+  </script>
+  <header>
     <hr>
-   </section>
-  </footer>
+    <b class="center">
+      <h1>POLYTYPICAL N-DIMENSIONAL FORMS</h1>
+    </b>
+  </header>
+  <hr>
+  <section>
+    <a title="Claudio Rocchini, CC BY 3.0 &lt;https://creativecommons.org/licenses/by/3.0&gt;, via Wikimedia Commons"
+      class="center">
+      <img width="700" alt="Gosset 1 22 polytope"
+        src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Gosset_1_22_polytope.svg/512px-Gosset_1_22_polytope.svg.png">
+
+    </a>
+    <footer>
+      <hr>
+      your full name:
+
+      <form>
+        <! need to figure out how to submit input and have it survive for the next webpage reload)>
+          <input>
+      </form>
+      <script>
+        user.firstname = document.getElementsByClassName("input")[0].value;
+      </script>
+      <nav class="footer">
+        <a href="https://en.wikipedia.org/wiki/Regular_polytope">
+          <h2>learn more about regular polytopes in <i> n-dimensional space</i></h2>
+        </a>
+      </nav>
+      <hr>
+      <section>
+        <h1> <b>LEARN MORE HERE</b></h1>
+
+        <button class="center" onmouseover="highlight();" onclick="document.write(user.firstname+user.lastname)">
+          cool graphs
+        </button>
+        <form class="center">
+          <hr>
+      </section>
+    </footer>
 </body>
 
 </html>
